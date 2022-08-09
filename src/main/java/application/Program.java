@@ -33,5 +33,18 @@ public class Program {
         for (Seller seller1 : list){
             System.out.println(seller1);
         }
+
+        System.out.println(".:: TESTE 04: Seller insert ::..");
+        Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, department);
+        sellerDAO.insert(newSeller);
+        System.out.println("Inserted! New seller ID: " + newSeller.getId());
+
+        System.out.println(".:: TESTE 05: Seller update ::..");
+        seller = sellerDAO.findById(5);
+        seller.setName("Bruce Parker");
+        sellerDAO.update(seller);
+        System.out.println("UPDATE completed");
+
+
     }
 }
