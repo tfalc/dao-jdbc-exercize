@@ -27,5 +27,11 @@ public class Program {
         for (Seller seller1 : list){
             System.out.println(seller1);
         }
+
+        System.out.println(".:: TESTE 03: Seller findAll ::..");
+        list = sellerDAO.findByDepartment(department);
+        for (Seller seller1 : list){
+            System.out.println(seller1);
+        }
     }
 }
