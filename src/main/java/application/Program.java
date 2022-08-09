@@ -9,10 +9,14 @@ import model.entities.Seller;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 
 public class Program {
 
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
         Department obj = new Department(1, "Books");
         System.out.println(obj);
 
@@ -45,6 +49,13 @@ public class Program {
         sellerDAO.update(seller);
         System.out.println("UPDATE completed");
 
+        System.out.println(".:: TESTE 06: Seller delete ::..");
+        System.out.println("Enteder id number to delete: ");
+        int id = sc.nextInt();
+        sellerDAO.deleteById(id);
+        System.out.println("Delete completed");
+
+        sc.close();
 
     }
 }
